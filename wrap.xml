@@ -1,7 +1,7 @@
 <tool id="rpRanker" name="Rank Pathways">
   <description>Calculate the global score based on thermodynamics, FBA, length, and reaction rule scores of heterologous pathway</description>
   <requirements>
-    <container type="package">rptools</container>
+    <requirement type="package">rptools</requirement>
   </requirements>
   <stdio>
 		<regex match="WARNING" level="warning" />
