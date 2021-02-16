@@ -1,0 +1,3 @@
+  <section id="synbiocad_path" name="SynBioCAD Pathway Analysis">
+    <tool file="rpRanker-galaxy/wrap.xml" />
+  </section>
