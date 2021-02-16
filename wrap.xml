@@ -8,7 +8,7 @@
 		<regex match="ERROR" level="error" />
 	</stdio>
   <command detect_errors="exit_code"><![CDATA[
-    python -m rptools.rpkanker
+    python -m rptools.rpranker
       '$input'
       --outfile '$output'
   ]]></command>
@@ -26,7 +26,6 @@
 				<param name="input" type="data" format="sbml" label="Input file" />
 			</when>
 		</conditional> -->
-</section>
   </inputs>
   <outputs>
     <data name="output" format="txt" label="Ranked Pathways" >
