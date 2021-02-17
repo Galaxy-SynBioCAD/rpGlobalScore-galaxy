@@ -9,11 +9,13 @@
 	</stdio>
   <command detect_errors="exit_code"><![CDATA[
     python -m rptools.rpranker
-      '$input'
+      #for $input in $pathway_collection
+        '$input'
+      #end for
       --outfile '$output'
   ]]></command>
   <inputs>
-    <param name="input" type="data_collection" label="Pathways" />
+    <param name="pathway_collection" type="data_collection" collection_type="list" label="Pathways" />
 		<!-- <conditional name="input_type">
 			<param name="input_format" type="select" label="Input/output format:">
 				<option value="tar.gz" selected="True">tar.gz</option>
@@ -28,7 +30,7 @@
 		</conditional> -->
   </inputs>
   <outputs>
-    <data name="output" format="txt" label="Ranked Pathways" >
+    <data name="output" format="tar.gz" label="${tool.name}" >
       <!-- <change_format>
         <when input="format_type.input_format" value="sbml" format="sbml"/>
       </change_format> -->
