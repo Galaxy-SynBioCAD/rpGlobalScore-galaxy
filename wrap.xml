@@ -13,7 +13,7 @@
         '$input'
       #end for
       --data_outfile '$output'
-      --top '$top'
+      --top '$adv.top'
   ]]></command>
   <inputs>
     <param name="pathway_collection" type="data_collection" collection_type="list" label="Pathways" />
