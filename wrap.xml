@@ -12,7 +12,7 @@
       #for $input in $pathway_collection
         '$input'
       #end for
-      --outfile '$output'
+      --data_outfile '$output'
   ]]></command>
   <inputs>
     <param name="pathway_collection" type="data_collection" collection_type="list" label="Pathways" />
