@@ -30,11 +30,7 @@
 		</conditional> -->
   </inputs>
   <outputs>
-    <data name="output" format="tar.gz" label="${tool.name} - ${pathway_collection.name}" >
-      <!-- <change_format>
-        <when input="format_type.input_format" value="sbml" format="sbml"/>
-      </change_format> -->
-    </data>
+    <data name="output" format="tar.gz" label="${tool.name} - ${pathway_collection.name}" />
   </outputs>
   <help><![CDATA[
 Rank Pathways
