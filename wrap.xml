@@ -13,9 +13,13 @@
         '$input'
       #end for
       --data_outfile '$output'
+      --top '$top'
   ]]></command>
   <inputs>
     <param name="pathway_collection" type="data_collection" collection_type="list" label="Pathways" />
+    <section name="adv" title="Advanced Options" expanded="false">
+       <param name="top" type="int" value="10" label="Number of pathways selected" />
+    </section>
 		<!-- <conditional name="input_type">
 			<param name="input_format" type="select" label="Input/output format:">
 				<option value="tar.gz" selected="True">tar.gz</option>
