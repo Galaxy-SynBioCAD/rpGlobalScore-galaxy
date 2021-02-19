@@ -8,12 +8,13 @@
 		<regex match="ERROR" level="error" />
 	</stdio>
   <command detect_errors="exit_code"><![CDATA[
-    python -m rptools.rpranker
-      #for $input in $pathway_collection
-        '$input'
-      #end for
-      --data_outfile '$output'
-      --top '$adv.top'
+      python -m rptools.rpranker
+        #for $input in $pathway_collection
+          '$input'
+        #end for
+        --data_outdir ranked_pathways
+        --top '$adv.top'
+    && tar czf $output ranked_pathways
   ]]></command>
   <inputs>
     <param name="pathway_collection" type="data_collection" collection_type="list" label="Pathways" />
