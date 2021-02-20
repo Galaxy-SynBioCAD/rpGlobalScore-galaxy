@@ -13,6 +13,7 @@
           '$input'
         #end for
         --data_outdir ranked_pathways
+        --rename
         --top '$adv.top'
     && tar czf $output ranked_pathways
   ]]></command>
@@ -35,7 +36,7 @@
 		</conditional> -->
   </inputs>
   <outputs>
-    <data name="output" format="tar.gz" label="${tool.name} - ${pathway_collection.name}" />
+    <data name="output" format="tar.gz" label="${tool.name}" />
   </outputs>
   <help><![CDATA[
 Rank Pathways
