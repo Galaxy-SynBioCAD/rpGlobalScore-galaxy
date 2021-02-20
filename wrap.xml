@@ -15,28 +15,17 @@
         --data_outdir ranked_pathways
         --rename
         --top '$adv.top'
-    && tar czf $output ranked_pathways
   ]]></command>
   <inputs>
     <param name="pathway_collection" type="data_collection" collection_type="list" label="Pathways" />
     <section name="adv" title="Advanced Options" expanded="false">
        <param name="top" type="integer" value="10" label="Number of pathways selected" />
     </section>
-		<!-- <conditional name="input_type">
-			<param name="input_format" type="select" label="Input/output format:">
-				<option value="tar.gz" selected="True">tar.gz</option>
-				<option value="sbml" >Collection</option>
-			</param>
-			<when value="tar.gz">
-				<param name="input" type="data" format="tar.gz" label="Input file" />
-			</when>
-			<when value="sbml">
-				<param name="input" type="data" format="sbml" label="Input file" />
-			</when>
-		</conditional> -->
   </inputs>
   <outputs>
-    <data name="output" format="tar.gz" label="${tool.name}" />
+    <collection name="list_output" type="list" label="${tool.name}">
+      <discover_datasets pattern="(?P&lt;designation&gt;.+)\.xml" ext="xml" directory="ranked_pathways" visible="false" />
+    </collection>
   </outputs>
   <help><![CDATA[
 Rank Pathways
